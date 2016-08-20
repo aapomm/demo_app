@@ -1,0 +1,22 @@
+= link_to 'Logout', :logout, :method => :delete
+
+
+%table.table
+  %thead
+    %tr
+      %th Fullname
+      %th Age
+      %th Sex
+      %th Location
+      %th Source Number
+      %th Status
+
+  %tbody
+    - @persons.each do |person|
+      %tr
+        %td= person.full_name
+        %td= person.age
+        %td= person.sex
+        %td= person.location
+        %td= person.source_number
+        %td= person.found ? 'Found' : 'Not Found'

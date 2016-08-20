@@ -1,0 +1,9 @@
+#errors
+  - flash.each do |name, msg|
+    = msg
+
+= form_tag :login, :method => :post do
+  .form-group
+    = text_field_tag :username, nil, :class => 'form-control', :placeholder => 'Username'
+    = password_field_tag :password, nil, :class => 'form-control', :placeholder => 'Password'
+    = submit_tag 'Login', :class => 'btn btn-default'
