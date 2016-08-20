@@ -19,6 +19,8 @@ gem 'haml'
 
 gem 'figaro'
 
+gem 'bcrypt'
+
 group :development, :test do
   gem 'byebug'
 
@@ -26,4 +28,3 @@ group :development, :test do
 
   gem 'web-console', '~> 2.0'
 end
-
