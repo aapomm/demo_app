@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :null_session
-  
+
   before_action :redirect_to_signin_path, :if => :signed_out?
 
 

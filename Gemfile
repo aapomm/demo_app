@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.2.0'
 
-gem 'sqlite3'
+gem 'pg'
 
 gem 'sass-rails', '~> 5.0'
 
@@ -20,6 +20,9 @@ gem 'haml'
 gem 'figaro'
 
 gem 'bcrypt'
+
+gem 'elasticsearch-rails', '~> 0.1.8'
+gem 'elasticsearch-model', '~> 0.1.8'
 
 group :development, :test do
   gem 'byebug'

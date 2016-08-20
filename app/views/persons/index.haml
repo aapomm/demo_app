@@ -1,22 +1,8 @@
 = link_to 'Logout', :logout, :method => :delete
 
+= form_tag '/persons/search', :method => :get do
 
-%table.table
-  %thead
-    %tr
-      %th Fullname
-      %th Age
-      %th Sex
-      %th Location
-      %th Source Number
-      %th Status
+  = text_field_tag 'query', nil
+  = submit_tag 'search'
 
-  %tbody
-    - @persons.each do |person|
-      %tr
-        %td= person.full_name
-        %td= person.age
-        %td= person.sex
-        %td= person.location
-        %td= person.source_number
-        %td= person.found ? 'Found' : 'Not Found'
+= render :partial => 'table', :locals => {:persons => @persons}

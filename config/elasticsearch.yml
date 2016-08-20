@@ -1,0 +1,17 @@
+analysis:
+  filter:
+    ngram_filter:
+      type: 'nGram'
+      min_gram: 3
+      max_gram: 8
+  analyzer:
+    ngram_analyzer:
+      tokenizer: 'ngram_tokenizer'
+      filter: ['ngram_filter', 'lowercase']
+      type: 'custom'
+  tokenizer:
+    ngram_tokenizer:
+      type: 'nGram'
+      token_chars: ['letter', 'digit']
+      min_gram: 3
+      max_gram: 8
