@@ -8,7 +8,7 @@ class CreatePeople < ActiveRecord::Migration
 
       t.string :source_number
 
-      t.boolean :found
+      t.boolean :found, :default => false
 
       t.timestamps null: false
     end
