@@ -2,7 +2,9 @@ Rails.application.routes.draw do
 
   root 'persons#index'
 
-  resources :persons, :only => :index
+  resources :persons, :only => :index do
+    get :search, :on => :collection
+  end
 
   get :signin, :controller => :sessions, :action => :new
   post :login, :controller => :sessions, :action => :create
