@@ -13,7 +13,7 @@ class TextsController < ApplicationController
   private
 
   def file_missing_person
-    MissingCreator.new.file_missing_person(
+    MissingPersonsHandler.new.file_missing_person(
       params[:message],
       params[:mobile_number]
     )

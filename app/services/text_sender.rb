@@ -17,12 +17,16 @@ class TextSender
       :message => message,
       :request_id => request_id
     }
+    send_post_request  @body.merge reply_body
+  end
 
-    headers = {}
-    request_body = @body.merge reply_body
-
-    rest_client = RestClient.new Figaro.env.chikka_endpoint, {:use_ssl => true}
-    rest_client.post headers, request_body, {}
+  def send_message message
+    send_body = {
+      :message_type => 'SEND',
+      :message_id => generate_message_id,
+      :message => message
+    }
+    send_post_request  @body.merge send_body
   end
 
 
@@ -31,6 +35,12 @@ class TextSender
 
   def generate_message_id
     Time.now.strftime '%Y%m%d%H%M%S%L'
+  end
+
+  def send_post_request body
+    headers = {}
+    rest_client = RestClient.new Figaro.env.chikka_endpoint, {:use_ssl => true}
+    rest_client.post headers, body, {}
   end
 
 end
