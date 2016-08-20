@@ -29,9 +29,9 @@ ActiveRecord::Schema.define(version: 20160820070707) do
     t.string   "sex"
     t.string   "location"
     t.string   "source_number"
-    t.boolean  "found"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.boolean  "found",         default: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
   end
 
 end
