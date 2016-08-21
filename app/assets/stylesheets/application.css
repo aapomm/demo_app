@@ -21,13 +21,18 @@
 }
 
 body {
-	font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 input {
-	border: none;
-	border-bottom: solid 1px black;
+  border: none;
+  border-bottom: solid 1px black;
 }
+
+  input[type="submit"] {
+    border: none;
+    background-color:#FDC513;
+  }
 
 .topNav {
   display: flex;
@@ -87,5 +92,38 @@ input {
       background-color:#FDC513;
     }
 
-		.form-group input[type="submit"] {
-		}
+    .form-group input[type="submit"] {
+    }
+
+main {
+  padding: 40px 50px;
+}
+
+  .search_form {
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    padding: 20px 30px;
+    background-color: gainsboro;
+  }
+
+  .search_form input[type="text"] {
+    margin-right: 20px;
+    width: 50%;
+  }
+
+  .tablesorter {
+    width: 100%;
+  }
+    .tablesorter td, .tablesorter th:not(:last-child) {
+      border-right: solid 1px black;
+    }
+
+  .list:nth-child(odd) {
+    background-color: gainsboro;
+  }
+
+  td {
+    padding: 5px 10px;
+    text-align: center;
+  }

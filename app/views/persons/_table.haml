@@ -7,16 +7,18 @@
       %th Location
       %th Source Number
       %th Status
-      %th
+      - if @current_user
+        %th Actions
 
   %tbody
     - persons.each do |person|
-      %tr
+      %tr.list
         %td= person.full_name
         %td= person.age
         %td= person.sex
         %td= person.location
         %td= person.source_number
         %td= person.found ? 'Found' : 'Not Found'
-        %td
-          = link_to 'Set as Found', set_as_found_person_path(person), :method => :post
+        - if @current_user
+          %td
+            = link_to 'Set as Found', set_as_found_person_path(person), :method => :post

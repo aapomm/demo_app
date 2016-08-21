@@ -1,6 +1,7 @@
-= form_tag '/persons/search', :method => :get do
+%main
+  = form_tag '/persons/search', :method => :get, :class => 'search_form' do
 
-  = text_field_tag 'query', nil
-  = submit_tag 'search'
+    = text_field_tag 'query', nil
+    = submit_tag 'Search'
 
-= render :partial => 'table', :locals => {:persons => @persons}
+  = render :partial => 'table', :locals => {:persons => @persons}

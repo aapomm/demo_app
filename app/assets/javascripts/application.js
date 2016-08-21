@@ -14,4 +14,8 @@
 //= require jquery_ujs
 //= require jquery-tablesorter
 //= require table-sorter
+//= require kissui.position/position
+//= require kissui.scrollanim/scrollanim
+//= require StickyTableHeaders/js/jquery.stickytableheaders
+//= require app
 //= require_tree .
