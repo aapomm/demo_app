@@ -13,21 +13,4 @@ class MissingPersonsHandler
     )
   end
 
-  def mark_person_as_found person
-    person.update_attribute :found, true
-
-    send_found_message person
-  end
-
-
-
-  private
-
-  def send_found_message person
-    TextSender.new(person.source_number).send_message(
-      "Si #{person.full_name} ay natagpuan na po. Maari po lamang na sunduin " \
-      "siya sa pinakamalapit na evacuation area."
-    )
-  end
-
 end

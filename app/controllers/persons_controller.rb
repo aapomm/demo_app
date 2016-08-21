@@ -17,10 +17,22 @@ class PersonsController <  ApplicationController
 
   def set_as_found
     @person = Person.find params[:id]
+    @person.update_attribute :found, true
 
-    MissingPersonsHandler.new.mark_person_as_found @person
+    send_found_message
 
     redirect_to :persons
+  end
+
+
+
+  protected
+
+  def send_found_message
+    TextSender.new(@person.source_number).send_message(
+      "Si #{@person.full_name} ay natagpuan na po. Maari po lamang na sunduin " \
+      "siya sa pinakamalapit na evacuation area."
+    )
   end
 
 end
