@@ -14,5 +14,5 @@
 //= require jquery_ujs
 //= require jquery-tablesorter
 //= require table-sorter
-//= require StickyTableHeaders/js/jquery.stickytableheaders
+//= require jquery.stickytableheaders.min.js
 //= require_tree .
