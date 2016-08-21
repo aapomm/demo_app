@@ -30,8 +30,9 @@ class PersonsController <  ApplicationController
 
   def send_found_message
     TextSender.new(@person.source_number).send_message(
-      "Si #{@person.full_name} ay natagpuan na po. Maari po lamang na sunduin " \
-      "siya sa pinakamalapit na evacuation area."
+      "Si #{@person.full_name} ay natagpuan na po. Maari po lamang na tumawag " \
+      "sa hotline numbers na +632-9125668, +632-9111406, o +632-9115061 at " \
+      "makipagcoordinate sa NDCC upang makumpirma kung siya nga."
     )
   end
 
