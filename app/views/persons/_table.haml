@@ -7,7 +7,7 @@
       %th Location
       %th Source Number
       %th Status
-      - if @current_user
+      - if signed_in?
         %th Actions
 
   %tbody
@@ -19,6 +19,6 @@
         %td= person.location
         %td= person.source_number
         %td= person.found ? 'Found' : 'Not Found'
-        - if @current_user
+        - if signed_in?
           %td
             = link_to 'Mark as Found', set_as_found_person_path(person), :method => :post

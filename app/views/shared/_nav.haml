@@ -2,9 +2,9 @@
   = link_to '/', :class => 'topNav_logo' do
     = image_tag 'sagip-icon.png', :class => 'topNav_logoImg'
   %ul.topNav_list
-    - if @current_user
+    - if signed_in?
       = link_to :logout, :method => :delete do
         %li.topNav_listItem Log-out
     - else
-      = link_to '/', :class => 'topNav_link' do
+      = link_to '/signin', :class => 'topNav_link' do
         %li.topNav_listItem Sign-in
