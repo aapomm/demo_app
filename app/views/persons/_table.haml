@@ -19,6 +19,6 @@
         %td= person.location
         %td= person.source_number
         %td= person.found ? 'Found' : 'Not Found'
-        - if signed_in?
+        - if signed_in? && !person.found
           %td
             = link_to 'Mark as Found', set_as_found_person_path(person), :method => :post
