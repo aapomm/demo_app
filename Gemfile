@@ -32,4 +32,6 @@ group :development, :test do
   gem 'thin'
 
   gem 'web-console', '~> 2.0'
+
+  gem 'faker'
 end
