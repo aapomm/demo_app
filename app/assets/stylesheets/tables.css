@@ -3,6 +3,15 @@
   margin-bottom: 0;
 }
 
+.responsive {
+  overflow-x: scroll;
+}
+
+.reminder {
+  width: 80%;
+  margin: 0 auto 20px;
+}
+
 .search_form {
   width: 100%;
   display:flex;
