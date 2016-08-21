@@ -24,17 +24,6 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-input {
-  border: none;
-  border-bottom: solid 1px black;
-}
-
-input[type="submit"] {
-  border: none;
-  background-color:#FDC513;
-}
-
-
 main {
   padding: 40px 50px;
 }

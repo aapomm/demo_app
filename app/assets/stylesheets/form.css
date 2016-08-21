@@ -1,3 +1,13 @@
+input {
+  border: none;
+  border-bottom: solid 1px black;
+}
+
+input[type="submit"] {
+  border: none;
+  background-color:#FDC513;
+}
+
 .form_wrapper {
   border: solid 1px black;
   width: 30%;
