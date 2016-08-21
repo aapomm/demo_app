@@ -6,7 +6,13 @@ class PersonsController <  ApplicationController
   end
 
   def search
-    @persons = Person.fulltext_search(params[:query]).records
+    @persons = Person.fulltext_search(params[:query]).records.order :found
+  end
+
+  def autocomplete
+    @persons = Person.fulltext_search(params[:q]).records.pluck :full_name
+
+    render :json => @persons
   end
 
   def set_as_found

@@ -19,4 +19,5 @@
         %td= person.source_number
         %td= person.found ? 'Found' : 'Not Found'
         %td
-          = link_to 'Set as Found', set_as_found_person_path(person), :method => :post
+          - if !person.found
+            = link_to 'Mark as Found', set_as_found_person_path(person), :method => :post
