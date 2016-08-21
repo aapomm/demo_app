@@ -1,10 +1,5 @@
 class SessionsController < ApplicationController
 
-  skip_before_action :redirect_to_signin_path,
-    :only => :destroy,
-    :if => :signed_out?
-
-
   def new
   end
 
@@ -27,7 +22,7 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
 
-    redirect_to [:signin], :notice => 'Logged out successfully.'
+    redirect_to [:root], :notice => 'Logged out successfully.'
   end
 
 end
