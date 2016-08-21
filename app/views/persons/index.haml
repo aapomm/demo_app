@@ -1,5 +1,11 @@
-%h1.index_head Missing Persons Database
 %main
+  %p.reminder 
+    Upang ipagbigay alam ang pagkawala ng inyong mahal sa buhay,
+    maaari niyong I-text ang&nbsp;
+    %br
+    %code &lt;pangalan/edad/kasarian/huling lokasyon&gt;
+    %span at ipadala sa
+    %code 292901818
   = form_tag '/persons/search', :method => :get, :class => 'search_form' do
 
     = text_field_tag 'query', nil, {:class => 'js-autocomplete', :data => {'autocomplete-limit' => '10', 'autocomplete' => '/persons/autocomplete'}}

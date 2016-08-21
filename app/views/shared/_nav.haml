@@ -1,6 +1,7 @@
 %header.topNav
   = link_to '/', :class => 'topNav_logo' do
     = image_tag 'sagip-icon.png', :class => 'topNav_logoImg'
+  %h1.index_head Missing Persons Database
   %ul.topNav_list
     - if signed_in?
       = link_to :logout, :method => :delete do
