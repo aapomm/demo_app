@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :persons, :only => :index do
     get :search, :on => :collection
+    get :autocomplete, :on => :collection
     post :set_as_found, :on => :member
   end
 

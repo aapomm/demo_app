@@ -21,4 +21,4 @@
         %td= person.found ? 'Found' : 'Not Found'
         - if @current_user
           %td
-            = link_to 'Set as Found', set_as_found_person_path(person), :method => :post
+            = link_to 'Mark as Found', set_as_found_person_path(person), :method => :post
