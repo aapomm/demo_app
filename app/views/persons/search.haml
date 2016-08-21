@@ -1,2 +1,3 @@
-= link_to 'Back to Search', '/'
-= render :partial => 'table', :locals => {:persons => @persons}
+%main
+  = link_to 'Back to Search', '/', :class => 'back_button'
+  = render :partial => 'table', :locals => {:persons => @persons}
