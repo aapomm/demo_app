@@ -10,6 +10,11 @@
 .reminder {
   width: 80%;
   margin: 0 auto 20px;
+  text-align: center;
+}
+
+.reminder code {
+  font-weight: bold;
 }
 
 .search_form {
