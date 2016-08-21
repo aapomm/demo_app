@@ -1,8 +1,7 @@
-= link_to 'Logout', :logout, :method => :delete
+%main
+  = form_tag '/persons/search', :method => :get, :class => 'search_form' do
 
-= form_tag '/persons/search', :method => :get do
+    = text_field_tag 'query', nil, {:class => 'js-autocomplete', :data => {'autocomplete-limit' => '10', 'autocomplete' => '/persons/autocomplete'}}
+    = submit_tag 'Search'
 
-  = text_field_tag 'query', nil, {:class => 'js-autocomplete', :data => {'autocomplete-limit' => '10', 'autocomplete' => '/persons/autocomplete'}}
-  = submit_tag 'search'
-
-= render :partial => 'table', :locals => {:persons => @persons}
+  = render :partial => 'table', :locals => {:persons => @persons}

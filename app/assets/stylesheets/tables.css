@@ -1,0 +1,33 @@
+.search_form {
+  width: 100%;
+  display:flex;
+  justify-content: center;
+  padding: 20px 30px;
+  background-color: gainsboro;
+}
+
+.search_form input[type="text"] {
+  margin-right: 20px;
+  width: 50%;
+}
+
+.tablesorter {
+  width: 100%;
+}
+
+.tablesorter td, .tablesorter th:not(:last-child) {
+  border-right: solid 1px black;
+}
+
+.list:nth-child(odd) {
+  background-color: gainsboro;
+}
+
+.list:hover {
+  background-color:#FDC513;
+}
+
+td {
+  padding: 5px 10px;
+  text-align: center;
+}

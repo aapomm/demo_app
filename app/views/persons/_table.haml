@@ -1,5 +1,5 @@
 %table.js-sortable-table.table.table-hover.table-align-center.tablesorter
-  %thead
+  %thead.table-header
     %tr
       %th Fullname
       %th Age
@@ -7,17 +7,18 @@
       %th Location
       %th Source Number
       %th Status
-      %th
+      - if @current_user
+        %th Actions
 
   %tbody
     - persons.each do |person|
-      %tr
+      %tr.list
         %td= person.full_name
         %td= person.age
         %td= person.sex
         %td= person.location
         %td= person.source_number
         %td= person.found ? 'Found' : 'Not Found'
-        %td
-          - if !person.found
+        - if @current_user
+          %td
             = link_to 'Mark as Found', set_as_found_person_path(person), :method => :post

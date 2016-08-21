@@ -1,0 +1,24 @@
+{
+  "name": "demo_app",
+  "homepage": "https://github.com/aapomm/demo_app",
+  "authors": [
+    "Jomel Ancino",
+    "Aaron Manalotto",
+    "Ian De La Cruz"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "StickyTableHeaders": "^0.1.19"
+  }
+}
