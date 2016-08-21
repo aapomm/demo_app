@@ -15,8 +15,14 @@
   width: 100%;
 }
 
-.tablesorter td, .tablesorter th:not(:last-child) {
+.tablesorter td:not(:last-child), .tablesorter th:not(:last-child) {
   border-right: solid 1px black;
+}
+
+.table-header th {
+  background-color: white;
+  padding: 20px 10px;
+  border-bottom: solid 1px black;
 }
 
 .list:nth-child(odd) {
