@@ -1,0 +1,27 @@
+.topNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 80px 10px 40px;
+  background-color: gainsboro;
+}
+
+.topNav_logo {
+  display: flex;
+  align-items: center;
+}
+
+.topNav_logoImg {
+  width: 80px;
+}
+
+
+.topNav a {
+  color: black;
+  text-decoration: none;
+}
+
+.topNav_list {
+  list-style-type: none;
+  padding: 0;
+}
