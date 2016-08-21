@@ -1,3 +1,0 @@
-$(function(){
-  AutoComplete({}, '.js-autocomplete');
-});
