@@ -15,4 +15,5 @@
 //= require jquery-tablesorter
 //= require table-sorter
 //= require StickyTableHeaders/js/jquery.stickytableheaders
+//= require app
 //= require_tree .
