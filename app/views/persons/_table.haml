@@ -1,24 +1,25 @@
-%table.js-sortable-table.table.table-hover.table-align-center.tablesorter
-  %thead.table-header
-    %tr
-      %th Fullname
-      %th Age
-      %th Sex
-      %th Location
-      %th Source Number
-      %th Status
-      - if signed_in?
-        %th Actions
-
-  %tbody
-    - persons.each do |person|
-      %tr.list
-        %td= person.full_name
-        %td= person.age
-        %td= person.sex
-        %td= person.location
-        %td= person.source_number
-        %td= person.found ? 'Found' : 'Not Found'
+.responsive
+  %table.js-sortable-table.table.table-hover.table-align-center.tablesorter
+    %thead.table-header
+      %tr
+        %th Fullname
+        %th Age
+        %th Sex
+        %th Location
+        %th Source Number
+        %th Status
         - if signed_in?
-          %td
-            = link_to 'Mark as Found', set_as_found_person_path(person), :method => :post
+          %th Actions
+
+    %tbody
+      - persons.each do |person|
+        %tr.list
+          %td= person.full_name
+          %td= person.age
+          %td= person.sex
+          %td= person.location
+          %td= person.source_number
+          %td= person.found ? 'Found' : 'Not Found'
+          - if signed_in?
+            %td
+              = link_to 'Mark as Found', set_as_found_person_path(person), :method => :post
