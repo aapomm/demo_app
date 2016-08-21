@@ -123,7 +123,11 @@ main {
     background-color: gainsboro;
   }
 
-  td {
-    padding: 5px 10px;
-    text-align: center;
+  .list:hover {
+    background-color:#FDC513;
   }
+
+    td {
+      padding: 5px 10px;
+      text-align: center;
+    }
